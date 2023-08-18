@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <script>
+            function calculate(){
+                var a=document.getElementById("my").value;
+                var b=eval(a);
+                document.getElementById("my").value=b;
+            }
+            function change(){
+                document.getElementById("my").value=" ";
+            }
+            function Value(value) {
+                var inputElement = document.getElementById("my");
+                inputElement.value += value;
+            }
+            function B()  
+            {  
+                var y = document.getElementById("display").value;  
+                document.getElementById("display").value = y.slice(0, y.length-1);  
+            }  
+    
+        </script>
+        <style>
+        button{
+            width: 65px;
+            height: 58px;
+            margin-left: 15px;
+            margin-top: 15px;
+            background-color: black;
+            color: azure;
+            font-size: 30px;
+            border-radius: 5px;
+        }
+        .container{
+            background-color: rgb(24, 24, 24);
+            width:340px;
+            height: 450px;
+            border-radius: 7px;
+            margin-left: 600px;
+            margin-top: 100px;
+        }
+        input{
+            margin-top: 16px;
+            width: 310px;
+            height: 45px;
+            margin-left: 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: #eaeaeb;
+            font-size: 15px;
+        }
+    </style>
+        
+    </head>
+    <body>
+        <div class="container">
+        <input type="text" id="my">
+        <button onclick="Value('(')">(</button>
+        <button onclick="Value(')')">)</button>
+        <button onclick="B()">CE</button>
+        <button onclick="change()" style="background-color: rgb(181, 10, 10);">c</button><br>
+<button onclick="Value('1')">1</button>
+<button onclick="Value('2')">2</button>
+<button onclick="Value('3')">3</button>
+<button onclick="Value('+')">+</button><br>
+<button onclick="Value('4')">4</button>
+<button onclick="Value('5')">5</button>
+<button onclick="Value('6')">6</button>
+<button onclick="Value('-')">-</button><br>
+<button onclick="Value('7')">7</button>
+<button onclick="Value('8')">8</button>
+<button onclick="Value('9')">9</button>
+<button onclick="Value('*')">*</button><br>
+<button onclick="Value('0')">0</button>
+<button onclick="Value('.')">.</button>
+<button onclick="Value('/')">/</button>
+<button onclick="calculate()" style="background-color: rgb(249, 249, 147); color:black">=</button>
+</div>
+    </body>
+</html>
